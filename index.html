@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="js/appController.js"></script>
+
+    <title>Guess Number</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="number">?</div>
+      <header class="header">
+        <h2>Guess number</h2>
+        <p class="header__text">&laquo;between 1 and 20&raquo;</p>
+        <p class="header__text message">Start guessing...</p>
+        <p class="header__text">Attempts: <span class="attempts">4</span></p>
+      </header>
+      <div class="display--keyboard">
+        <div class="keyboard"></div>
+        <button class="btn btn-again hidden">Again</button>
+      </div>
+    </div>
+  </body>
+</html>

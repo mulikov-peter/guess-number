@@ -1,0 +1,148 @@
+:root {
+  --color-primary-dark: #333;
+  --color-primary-medium: #6d6d6d;
+  --color-primary-light: #eee;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Press Start 2P', cursive, sans-serif;
+  background-image: linear-gradient(
+    to right bottom,
+    var(--color-primary-medium),
+    var(--color-primary-dark)
+  );
+  color: var(--color-primary-light);
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* ===== Header ===== */
+.header {
+  text-align: center;
+  height: 50%;
+  border-bottom: 3px solid var(--color-primary-light);
+  position: relative;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+.header__text {
+  font-size: 1.5rem;
+  margin: 2.2rem;
+}
+
+.number {
+  font-size: 5rem;
+  color: var(--color-primary-light);
+  border: 3px solid var(--color-primary-light);
+  background-color: var(--color-primary-dark);
+  padding: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9;
+}
+
+/* ===== Keyboard ===== */
+.display--keyboard {
+  height: 50%;
+  position: relative;
+}
+
+.keyboard {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.4s;
+}
+
+.btn {
+  border: none;
+  color: var(--color-primary-light);
+  background-color: var(--color-primary-dark);
+  font-size: 2rem;
+  font-family: inherit;
+  cursor: pointer;
+  outline: none;
+}
+
+.keyboard__button {
+  width: 5rem;
+  height: 5rem;
+  margin: 0.5rem;
+}
+
+.btn-again {
+  background-color: var(--color-primary-light);
+  color: var(--color-primary-dark);
+  padding: 2rem 3rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+  z-index: -1;
+}
+
+.active {
+  opacity: 1;
+  overflow: visible;
+}
+
+.won {
+  background-image: linear-gradient(to right bottom, green, darkgreen);
+}
+
+.lost {
+  background-image: linear-gradient(to right bottom, red, darkred);
+}
+
+/* ===== Media query ===== */
+@media only screen and (max-width: 43.75em) {
+  .header__text {
+    font-size: 1.5rem;
+    margin: 2rem 0;
+  }
+
+  .keyboard__button {
+    font-size: 1.5rem;
+    width: 4rem;
+    height: 4rem;
+    margin: 0.5rem;
+  }
+}
